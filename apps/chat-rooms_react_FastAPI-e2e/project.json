@@ -1,9 +1,0 @@
-{
-  "name": "chat-rooms_react_FastAPI-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/chat-rooms_react_FastAPI-e2e/src",
-  "tags": [],
-  "implicitDependencies": ["chat-rooms_react_FastAPI"],
-  "// targets": "to see all targets run: nx show project chat-rooms_react_FastAPI-e2e --web",
-  "targets": {}
-}
