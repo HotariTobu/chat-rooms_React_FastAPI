@@ -23,6 +23,13 @@
       "executor": "@nxlv/python:remove",
       "options": {}
     },
+    "dev": {
+      "executor": "@nxlv/python:run-commands",
+      "options": {
+        "command": "fastapi dev src/main.py",
+        "cwd": "apps/backend"
+      }
+    },
     "build": {
       "executor": "@nxlv/python:build",
       "outputs": ["{projectRoot}/dist"],
