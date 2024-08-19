@@ -1,0 +1,23 @@
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+exclude_lines = ['if TYPE_CHECKING:']
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html:'../../coverage/backend/html' --cov-report xml:'../../coverage/backend/coverage.xml' --html='../../reports/backend/unittests/html/index.html' --junitxml='../../reports/backend/unittests/junit.xml'"
+
+[tool.poetry]
+package-mode = false
+
+[[tool.poetry.packages]]
+include = "src"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
