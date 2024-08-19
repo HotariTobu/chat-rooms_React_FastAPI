@@ -3,6 +3,15 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "ms-playwright.playwright",
-    "firsttris.vscode-jest-runner"
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "dsznajder.es7-react-js-snippets",
+    "njpwerner.autodocstring",
+    "dbaeumer.vscode-eslint",
+    "tamasfe.even-better-toml",
+    "firsttris.vscode-jest-runner",
+    "christian-kohler.npm-intellisense",
+    "ms-python.python",
+    "charliermarsh.ruff"
   ]
 }
