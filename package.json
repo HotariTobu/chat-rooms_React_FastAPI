@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepare": "poetry install",
+    "generate:client": "nx affected -t generate:client",
+    "prepare": "poetry install && npm run generate:client",
     "dev": "nx run-many -t dev",
     "format": "nx format:write",
     "typecheck": "nx affected -t typecheck",
@@ -20,6 +21,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.52.9",
     "@nx/devkit": "19.6.0",
     "@nx/eslint": "19.6.0",
     "@nx/eslint-plugin": "19.6.0",

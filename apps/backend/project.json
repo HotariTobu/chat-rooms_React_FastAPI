@@ -75,6 +75,16 @@
         "cwd": "{projectRoot}",
         "command": "pytest tests/"
       }
+    },
+    "generate:client": {
+      "executor": "@nxlv/python:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "commands": [
+          "python -m scripts.export_openapi openapi.json",
+          "npx openapi-ts -i openapi.json -o ../../node_modules/backend -c axios"
+        ]
+      }
     }
   },
   "tags": []
