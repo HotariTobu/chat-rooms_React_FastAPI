@@ -4,6 +4,7 @@
 dist
 tmp
 /out-tsc
+*.tsbuildinfo
 
 # dependencies
 node_modules
@@ -197,6 +198,9 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
+
+# lint and test outputs
+reports
 
 # Cython debug symbols
 cython_debug/

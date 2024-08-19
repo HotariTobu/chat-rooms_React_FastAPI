@@ -7,8 +7,8 @@
     "lock": {
       "executor": "@nxlv/python:run-commands",
       "options": {
-        "command": "poetry lock --no-update",
-        "cwd": "apps/backend"
+        "cwd": "{projectRoot}",
+        "command": "poetry lock --no-update"
       }
     },
     "add": {
@@ -26,8 +26,8 @@
     "dev": {
       "executor": "@nxlv/python:run-commands",
       "options": {
-        "command": "fastapi dev src/main.py",
-        "cwd": "apps/backend"
+        "cwd": "{projectRoot}",
+        "command": "fastapi dev src/main.py"
       }
     },
     "build": {
@@ -50,10 +50,18 @@
         "debug": false
       }
     },
+    "typecheck": {
+      "executor": "@nxlv/python:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "pytype src tests"
+      }
+    },
     "lint": {
-      "executor": "@nxlv/python:flake8",
+      "executor": "@nxlv/python:ruff-check",
       "outputs": ["{workspaceRoot}/reports/backend/pylint.txt"],
       "options": {
+        "lintFilePatterns": ["src", "tests"],
         "outputFile": "reports/backend/pylint.txt"
       }
     },
@@ -64,8 +72,8 @@
         "{workspaceRoot}/coverage/backend"
       ],
       "options": {
-        "command": "poetry run pytest tests/",
-        "cwd": "apps/backend"
+        "cwd": "{projectRoot}",
+        "command": "pytest tests/"
       }
     }
   },

@@ -2,7 +2,15 @@
   "name": "@chat-rooms-react-fast-api/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "poetry install",
+    "dev": "nx run-many -t dev",
+    "format": "nx format:write",
+    "typecheck": "nx affected -t typecheck",
+    "lint": "nx affected -t lint",
+    "test": "nx affected -t test",
+    "ci": "nx affected -t typecheck lint test e2e-ci"
+  },
   "private": true,
   "dependencies": {
     "next": "14.2.3",
